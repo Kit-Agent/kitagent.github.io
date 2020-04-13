@@ -15,7 +15,7 @@
 	</head>
 	<body>
 
-<input type="button" name="click" value="Click" onClick="sound()">
+<input type="button" name="click" value="Click" onClick="sound()" id="vibrate">
  
 <!-- 音声ファイルの読み込み 9〜10行目にURLを指定 -->
 <audio id="sound-file" preload="auto">
@@ -39,7 +39,7 @@ function sound()
 	document.getElementById( id ).play() ;
 }
       window.addEventListener("load", function(){
-        document.getElementById("sound()").addEventListener("click", function(){
+        document.getElementById("vibrate").addEventListener("click", function(){
           if(window.navigator.vibrate){
             window.navigator.vibrate([200,200,200,200,200]);
           }else if(window.navigator.mozVibrate){
