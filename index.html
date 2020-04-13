@@ -6,7 +6,7 @@
 <style type="text/css">
 	input{
 		font-size: 30px;
-		margin: 0 auto;
+		margin: 30px ;
 		color: red;
 		background-color: #eee;
 
@@ -14,13 +14,13 @@
 </style>
 	</head>
 	<body>
-
-<input type="button" name="click" value="Click" onClick="sound()">
+<br><br>
+<input type="button" name="click" value="Click" onClick="sound()" id="vibrate">
  
 <!-- 音声ファイルの読み込み 9〜10行目にURLを指定 -->
 <audio id="sound-file" preload="auto">
-	<source src="garn.mp3" type="audio/mp3">
-	<source src="garn.wav" type="audio/wav">
+	<source src="https://kitagent.webnode.jp/_files/200000016-a13b1a13b4/garn.mp3" type="audio/mp3">
+	<source src="https://kitagent.webnode.jp/_files/200000017-d4202d4204/garn.wav" type="audio/wav">
 </audio>
 		<script>
 
@@ -39,7 +39,7 @@ function sound()
 	document.getElementById( id ).play() ;
 }
       window.addEventListener("load", function(){
-        document.getElementById("sound()").addEventListener("click", function(){
+        document.getElementById("vibrate").addEventListener("click", function(){
           if(window.navigator.vibrate){
             window.navigator.vibrate([200,200,200,200,200]);
           }else if(window.navigator.mozVibrate){
